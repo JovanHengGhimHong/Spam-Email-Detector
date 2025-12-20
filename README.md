@@ -39,12 +39,18 @@ pip install -r requirements.txt
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. Run the Flask application:
+2. (Optional) Set a custom SECRET_KEY for production:
+```bash
+export SECRET_KEY='your-secure-random-secret-key'  # On Windows: set SECRET_KEY=your-secure-random-secret-key
+```
+Note: For development, a default key is provided, but for production you should set your own secure random key.
+
+3. Run the Flask application:
 ```bash
 python app.py
 ```
 
-3. Open your browser and navigate to:
+4. Open your browser and navigate to:
 ```
 http://127.0.0.1:5000
 ```

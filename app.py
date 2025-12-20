@@ -28,4 +28,7 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Debug mode should only be enabled in development
+    # Set DEBUG=True environment variable for development, or it defaults to False
+    debug_mode = os.environ.get('DEBUG', 'False').lower() == 'true'
+    app.run(debug=debug_mode)

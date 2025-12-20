@@ -39,11 +39,20 @@ pip install -r requirements.txt
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. (Optional) Set a custom SECRET_KEY for production:
+2. (Optional) Set environment variables:
+
+For **development** with debug mode:
+```bash
+export DEBUG=True  # On Windows: set DEBUG=True
+```
+
+For **production** with a custom SECRET_KEY:
 ```bash
 export SECRET_KEY='your-secure-random-secret-key'  # On Windows: set SECRET_KEY=your-secure-random-secret-key
 ```
-Note: For development, a default key is provided, but for production you should set your own secure random key.
+Note: 
+- Debug mode is disabled by default for security. Only enable it in development.
+- A default SECRET_KEY is provided for development, but you should set your own secure random key in production.
 
 3. Run the Flask application:
 ```bash

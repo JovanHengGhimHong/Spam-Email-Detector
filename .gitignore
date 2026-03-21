@@ -3,3 +3,4 @@ weights/
 __pycache__/
 .env
 .cfg
+results/
